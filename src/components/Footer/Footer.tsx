@@ -78,7 +78,7 @@ export default function Footer() {
           SOS JF &mdash; Solidariedade em tempo de crise &mdash; Juiz de Fora, MG
         </p>
         <p className={styles.disclaimer}>
-          Desenvolvido por <a href="https://github.com/caiofdev" target="_blank" rel="noopener noreferrer">Caio Freis</a> &mdash; Site voluntário e informativo. Informações sujeitas a atualização.
+          Desenvolvido por <a href="https://github.com/caiofdev" target="_blank" rel="noopener noreferrer">Caio Reis</a> &mdash; Site voluntário e informativo. Informações sujeitas a atualização.
         </p>
       </div>
     </footer>
