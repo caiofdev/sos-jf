@@ -26,7 +26,7 @@ export default function Header() {
         <span>🚑 SAMU:</span>
         <a href="tel:192">192</a>
         <span className={styles.divider}>|</span>
-        <span>🆘 Emergência:</span>
+        <span>🚓 Polícia Militar:</span>
         <a href="tel:190">190</a>
       </div>
     </header>
