@@ -9,7 +9,7 @@ export default function Header() {
           <span className={styles.jf}>JF</span>
         </div>
         <div className={styles.tagline}>
-          <p className={styles.title}>Chuvas em Juiz de Fora — 23 de Fevereiro de 2025</p>
+          <p className={styles.title}>Chuvas em Juiz de Fora — 23 de Fevereiro de 2026</p>
           <p className={styles.subtitle}>
             Encontre os pontos de coleta de doações e ajude quem mais precisa
           </p>
