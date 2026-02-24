@@ -1,0 +1,167 @@
+[
+  {
+    "id": "1",
+    "name": "Casa da Mulher",
+    "address": "Av. Garibaldi Campinhos, 169",
+    "neighborhood": "Vitorino Braga", 
+    "phone": "(32) 3690-7292",
+    "hours": "Segunda a Domingo, 24h",
+    "coordinates": { "lat": -21.753831140109178, "lng": -43.345084988278984 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ],
+    "notes": "Funcionamento 24h."
+  },
+  {
+    "id": "2",
+    "name": "Prefeitura de Juiz de Fora",
+    "address": "Av. Brasil, 2001",
+    "neighborhood": "Centro",
+    "phone": "(32) 3690-7000",
+    "hours": "Segunda a Sexta, 08h às 18h",
+    "coordinates": { "lat": -21.757410354111183, "lng": -43.344224445290784 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ],
+    "notes": "Coordenação central da Defesa Civil. Qualquer dúvida entre em contato pelo telefone."
+  },
+  {
+    "id": "3",
+    "name": "Conselho Tutelar Sul-Oeste",
+    "address": "Av. Rio Branco, 1843 / 1 andar (Prédio Cesama)",
+    "neighborhood": "Centro",
+    "phone": "(32) 3690-7397",
+    "hours": "24 horas",
+    "coordinates": { "lat": -21.7577, "lng": -43.3504 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ],
+    "notes": "Funcionamento 24h."
+  },
+  {
+    "id": "4",
+    "name": "Escola Municipal Murilo Mendes",
+    "address": "Rua Dr. Leonel Jaguaribe, 240",
+    "neighborhood": "Alto Grajaú",
+    "phone": "(32) 3690-7678",
+    "hours": "Segunda a Sexta, 10h às 16h",
+    "coordinates": { "lat": -21.7450, "lng": -43.34077 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Escola Municipal Professor Nilo Camilo Ayupe",
+    "address": "Rua Almirante Barroso, 155",
+    "neighborhood": "Paineras",
+    "phone": "(32) 3690-8607",
+    "hours": "Segunda a Sexta, 08h às 16h",
+    "coordinates": { "lat": -21.768105413115652, "lng": -43.35584978761777 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Shopping Jardim Norte",
+    "address": "Av. Brasil, 6345",
+    "neighborhood": "Mariano Procópio",
+    "phone": "(32) 3512-2000",
+    "hours": "Segunda a Domingo, 10h às 22h",
+    "coordinates": { "lat": -21.740345034523614, "lng": -43.37072158947276 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Unimed Juiz de Fora",
+    "address": "Av. Rio Branco, 2540",
+    "neighborhood": "Centro",
+    "phone": "0800 030 1166",
+    "hours": "Segunda a Sexta, 08h às 18h",
+    "coordinates": { "lat": -21.764134278681272, "lng": -43.34920221830841 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "IF Sudeste",
+    "address": "Rua Bernardo Mascarenhas, 1283",
+    "neighborhood": "Fábrica",
+    "phone": "(32) 4009-3003",
+    "hours": "Segunda a Sexta, 07h às 23h",
+    "coordinates": { "lat": -21.741757605475613, "lng": -43.3741446011095 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Escola Municipal Paulo Rogério dos Santos",
+    "address": "Rua Cel. Quintão, 136",
+    "neighborhood": "Monte Castelo",
+    "phone": "(32) 3690-7922",
+    "hours": "Segunda a Sexta, 07h às 23h",
+    "coordinates": { "lat": -21.74424209285114, "lng": -43.38416383543855 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores e colchões",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  }
+]
