@@ -12,7 +12,7 @@ export default function AlertBanner({ totalPoints }: Props) {
         <div className={styles.content}>
           <h2 className={styles.heading}>Situação de Emergência</h2>
           <p className={styles.text}>
-            Na noite de <strong>23 de fevereiro de 2025</strong>, fortes chuvas atingiram Juiz de
+            Na noite de <strong>23 de fevereiro de 2026</strong>, fortes chuvas atingiram Juiz de
             Fora causando inundações, deslizamentos e deixando diversas famílias desabrigadas em
             vários bairros. A Defesa Civil segue em alerta máximo. Se você puder ajudar,{' '}
             <strong>qualquer doação faz a diferença.</strong>
