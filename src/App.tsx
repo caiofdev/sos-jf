@@ -29,7 +29,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <AlertBanner />
+      <AlertBanner totalPoints={collectionPoints.length} />
       <main>
         <section id="mapa">
           <MapView
