@@ -91,29 +91,18 @@
   color: var(--color-text-muted);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+  .section {
+    padding: 1.25rem 0.75rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
 
-  .section {
-    padding: 1.5rem 1rem;
-  }
-
-  .pageInfo {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 600px) {
   .heading {
-    align-items: center;
-    text-align: center;
-  }
-
-  .title::before {
-    display: none;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .pagination {
@@ -124,5 +113,11 @@
     width: 100%;
     text-align: center;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .section {
+    padding: 1rem 0.5rem;
   }
 }

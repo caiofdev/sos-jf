@@ -133,26 +133,40 @@
 }
 
 @media (max-width: 600px) {
+  .card {
+    padding: 0.85rem 1rem;
+  }
+
   .top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .pin {
-    margin-top: 0;
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .address {
+    font-size: 0.78rem;
   }
 
   .meta {
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
   }
 
   .itemsList {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .notes {
-    justify-content: center;
-    text-align: center;
+    text-align: left;
+    justify-content: flex-start;
   }
 }
