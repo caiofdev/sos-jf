@@ -11,10 +11,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ],
     "notes": "Funcionamento 24h."
   },
@@ -30,10 +33,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ],
     "notes": "Coordenação central da Defesa Civil. Qualquer dúvida entre em contato pelo telefone."
   },
@@ -44,15 +50,18 @@
     "neighborhood": "Centro",
     "phone": "(32) 3690-7397",
     "hours": "24 horas",
-    "coordinates": { "lat": -21.7577, "lng": -43.3504 },
+    "coordinates": { "lat": -21.757661441456747, "lng": -43.35047200852606 },
     "acceptedItems": [
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ],
     "notes": "Funcionamento 24h."
   },
@@ -63,15 +72,18 @@
     "neighborhood": "Alto Grajaú",
     "phone": "(32) 3690-7678",
     "hours": "Segunda a Sexta, 10h às 16h",
-    "coordinates": { "lat": -21.7450, "lng": -43.34077 },
+    "coordinates": { "lat": -21.74501517240005, "lng": -43.34076395878199 },
     "acceptedItems": [
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   },
   {
@@ -86,10 +98,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   },
   {
@@ -104,10 +119,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   },
   {
@@ -122,10 +140,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   },
   {
@@ -140,10 +161,13 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   },
   {
@@ -158,10 +182,246 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Água mineral",
-      "Cobertores e colchões",
+      "Cobertores, Colchões e Travesseiros",
       "Produtos de higiene pessoal",
       "Medicamentos (lacrados)",
-      "Produtos de limpeza"
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "DCE UFJF",
+    "address": "St. L - Via Local",
+    "neighborhood": "Monte Castelo",
+    "phone": "(32) 2102-3758",
+    "hours": "Segunda a Sexta, 10h às 18h",
+    "coordinates": { "lat": -21.7729211292164, "lng": -43.36919934884002 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ],
+    "notes": "Em frente à central de segurança."
+  },
+  {
+    "id": "11",
+    "name": "Faculdade de Medicina UFJF",
+    "address": "Av. Eugênio do Nascimento, s/n",
+    "neighborhood": "Dom Bosco",
+    "phone": "(32) 2102-3911",
+    "hours": "Segunda a Sexta, 08h às 17h",
+    "coordinates": { "lat": -21.786396004872373, "lng": -43.368848074126255 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ],
+    "notes": "Até dia 06/03."
+  },
+  {
+    "id": "12",
+    "name": "Terreiro Filhos do Rei",
+    "address": "Professor José Barata, 180",
+    "neighborhood": "Santos Dumont",
+    "phone": "(32) 9 9839-4606",
+    "hours": "Sabádo e Segunda, 18h às 22h",
+    "coordinates": { "lat": -21.778982120202894, "lng": -43.38681627661342 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Sindicato dos Bancários",
+    "address": "Rua Batista de Oliveira, 745",
+    "neighborhood": "Centro",
+    "phone": "(32) 3215-2249",
+    "hours": "Segunda a Sexta, 09h às 18h",
+    "coordinates": { "lat": -21.762254188860958, "lng": -43.346333174126904 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Igreja Metodista em Bela Aurora",
+    "address": "Rua Dr. Costa Reis, 380",
+    "neighborhood": "Ipiranga",
+    "phone": "(32) 9 8886-8951",
+    "hours": "Terça a Domingo, Diversos horários",
+    "coordinates": { "lat": -21.789459133496447, "lng": -43.35634660544787 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Shopping Independêencia",
+    "address": "Av. Presidente Itamar Franco, 3600",
+    "neighborhood": "Cascatinha",
+    "phone": "(32) 3257-3604",
+    "hours": "Segunda a Domingo, 10h às 22h",
+    "coordinates": { "lat": -21.780787873626316, "lng": -43.36034048761765 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "AACI",
+    "address": "Rua Dr. Dias da Cruz, 487",
+    "neighborhood": "Nova Era",
+    "phone": "(32) 3226-4832",
+    "hours": "Segunda a Sexta, 08h às 17h",
+    "coordinates": { "lat": -21.702425381724012, "lng": -43.4259262164559 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "OK Peças",
+    "address": "Rua Floriano Peixoto, 45",
+    "neighborhood": "Centro",
+    "phone": "(32) 3212-1800",
+    "hours": "Segunda a Sábado, 09h às 18h",
+    "coordinates": { "lat": -21.757913770659734, "lng": -43.34615130296356 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Belle Shop",
+    "address": "Rua São João, 195",
+    "neighborhood": "Centro",
+    "phone": "(32) 3215-9088",
+    "hours": "Segunda a Sábado, 09h às 19h",
+    "coordinates": { "lat": -21.76165055237396, "lng": -43.3469089011091 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Uni Academia",
+    "address": "Rua Halfeld, 1179",
+    "neighborhood": "Centro",
+    "phone": "(32) 3250-3800",
+    "hours": "Segunda a Sábado, 08h às 18h",
+    "coordinates": { "lat": -21.76196612211165, "lng": -43.35299628423874 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "EmCasa",
+    "address": "Av. Sete de Setembro, 975",
+    "neighborhood": "Costa Carvalho",
+    "phone": "(32) 3217-1400",
+    "hours": "Segunda a Sexta, 08h às 12h e 13h às 17h",
+    "coordinates": { "lat": -21.759626419479826, "lng": -43.34130217847045 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Produtos de limpeza",
+      "Ração para animais"
     ]
   }
 ]
