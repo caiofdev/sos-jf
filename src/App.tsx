@@ -12,10 +12,18 @@ const collectionPoints = collectionPointsData as CollectionPoint[]
 export default function App() {
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
-  function handleSelect(id: string) {
+  function handleCardSelect(id: string) {
     setSelectedId((prev) => (prev === id ? null : id))
-    // Scroll to map on mobile
+    // Fly map into view so the user sees the animation
     document.getElementById('mapa')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function handleMarkerClick(id: string) {
+    setSelectedId((prev) => (prev === id ? null : id))
+    // Scroll to the corresponding card so the user can read the details
+    setTimeout(() => {
+      document.getElementById(`point-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 400)
   }
 
   return (
@@ -27,13 +35,13 @@ export default function App() {
           <MapView
             points={collectionPoints}
             selectedId={selectedId}
-            onSelect={handleSelect}
+            onMarkerClick={handleMarkerClick}
           />
         </section>
         <PointsList
           points={collectionPoints}
           selectedId={selectedId}
-          onSelect={handleSelect}
+          onSelect={handleCardSelect}
         />
       </main>
       <Footer />

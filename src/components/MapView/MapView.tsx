@@ -1,4 +1,5 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useEffect } from 'react'
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { CollectionPoint } from '../../types/CollectionPoint'
@@ -28,12 +29,26 @@ const redIcon = new L.Icon({
 interface Props {
   points: CollectionPoint[]
   selectedId: string | null
-  onSelect: (id: string) => void
+  onMarkerClick: (id: string) => void
 }
 
 const JF_CENTER: [number, number] = [-21.7642, -43.3503]
 
-export default function MapView({ points, selectedId, onSelect }: Props) {
+function MapFlyController({ selectedId, points }: { selectedId: string | null; points: CollectionPoint[] }) {
+  const map = useMap()
+
+  useEffect(() => {
+    if (!selectedId) return
+    const point = points.find((p) => p.id === selectedId)
+    if (point) {
+      map.flyTo([point.coordinates.lat, point.coordinates.lng], 16, { duration: 1.2 })
+    }
+  }, [selectedId, points, map])
+
+  return null
+}
+
+export default function MapView({ points, selectedId, onMarkerClick }: Props) {
   return (
     <div className={styles.wrapper}>
       <MapContainer
@@ -46,13 +61,14 @@ export default function MapView({ points, selectedId, onSelect }: Props) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <MapFlyController selectedId={selectedId} points={points} />
 
         {points.map((point) => (
           <Marker
             key={point.id}
             position={[point.coordinates.lat, point.coordinates.lng]}
             icon={redIcon}
-            eventHandlers={{ click: () => onSelect(point.id) }}
+            eventHandlers={{ click: () => onMarkerClick(point.id) }}
           >
             <Popup>
               <div className={styles.popup}>
