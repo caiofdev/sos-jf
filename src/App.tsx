@@ -14,13 +14,11 @@ export default function App() {
 
   function handleCardSelect(id: string) {
     setSelectedId((prev) => (prev === id ? null : id))
-    // Fly map into view so the user sees the animation
     document.getElementById('mapa')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   function handleMarkerClick(id: string) {
     setSelectedId((prev) => (prev === id ? null : id))
-    // Scroll to the corresponding card so the user can read the details
     setTimeout(() => {
       document.getElementById(`point-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }, 400)

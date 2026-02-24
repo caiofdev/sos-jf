@@ -105,3 +105,24 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .heading {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title::before {
+    display: none;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .pageInfo {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+}

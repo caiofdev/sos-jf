@@ -3,7 +3,7 @@ import type { CollectionPoint } from '../../types/CollectionPoint'
 import CollectionPointCard from '../CollectionPointCard/CollectionPointCard'
 import styles from './PointsList.module.css'
 
-const PAGE_SIZE = 9
+const PAGE_SIZE = 6
 
 interface Props {
   points: CollectionPoint[]
@@ -18,7 +18,6 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
   const start = (currentPage - 1) * PAGE_SIZE
   const visiblePoints = points.slice(start, start + PAGE_SIZE)
 
-  // When a marker is clicked on the map, jump to the page that contains the selected card
   useEffect(() => {
     if (!selectedId) return
     const index = points.findIndex((p) => p.id === selectedId)
