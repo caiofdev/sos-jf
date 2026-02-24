@@ -8,8 +8,8 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
