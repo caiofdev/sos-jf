@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import CollectionPointCard from '../CollectionPointCard/CollectionPointCard'
+import NoticeCard from '../NoticeCard/NoticeCard'
 import styles from './PointsList.module.css'
 
 const PAGE_SIZE = 6
@@ -50,14 +51,7 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
           </p>
         </div>
 
-        <div className={styles.notice}>
-          <span className={styles.noticeIcon}>⚠️</span>
-          <p className={styles.noticeText}>
-            <strong>Atenção:</strong> sempre verifique as informações dos locais antes de se
-            deslocar. É recomendado ligar com antecedência para confirmar horários e a situação
-            atual do ponto de coleta.
-          </p>
-        </div>
+        <NoticeCard />
 
         <div className={styles.grid}>
           {visiblePoints.map((point) => (
