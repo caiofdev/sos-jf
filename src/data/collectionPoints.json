@@ -504,5 +504,245 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza"
     ]
+  },
+  {
+    "id": "27",
+    "name": "Colégio Cave",
+    "address": "Rua Tiradentes, 567",
+    "neighborhood": "Santa Helena",
+    "phone": "(32) 3690-4001",
+    "hours": "Segunda a Sexta, 08h às 18h",
+    "coordinates": { "lat": -21.760071357618674, "lng": -43.35392946063588 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "28",
+    "name": "Moinho Center",
+    "address": "Av. Presidente Juscelino Kubitschek, 900",
+    "neighborhood": "Francisco Bernardino",
+    "phone": "(32) 9 9130-0549",
+    "hours": "Segunda a Sábado, 07h às 19h",
+    "coordinates": { "lat": -21.733335390020613, "lng": -43.39442577412776 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "29",
+    "name": "Zine Cultural",
+    "address": "Praça Menelick de Carvalho, 150",
+    "neighborhood": "Santa Helena",
+    "phone": "(32) 9 9839-2298",
+    "hours": "Segunda a Sexta, 10h às 18h",
+    "coordinates": { "lat": -21.757800212593462, "lng": -43.35386827598119 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "30",
+    "name": "Souza Gomes",
+    "address": "Av. Presidente Itamar Franco, 2.800",
+    "neighborhood": "São Mateus",
+    "phone": "(32) 3512-3999",
+    "hours": "Segunda a Sábado, 8h30 às 18h30",
+    "coordinates": { "lat": -21.776936569347953, "lng": -43.358201189471934 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Sicredi - Centro",
+    "address": "Av. Barão do Rio Branco, 1662",
+    "neighborhood": "Centro",
+    "phone": "(32) 3229-4550",
+    "hours": "Segunda a Sexta, 10h às 15h30",
+    "coordinates": { "lat": -21.754817680954858, "lng": -43.35133295826772 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Sicredi - Cascatinha",
+    "address": "Av. Dr. Paulo Japiassú Coelho, 339",
+    "neighborhood": "Cascatinha",
+    "phone": "(51) 3358-4770",
+    "hours": "Segunda a Sexta, 10h às 15h30",
+    "coordinates": { "lat": -21.782943718226242, "lng": -43.364358276319784 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "33",
+    "name": "Sicredi - Benfica",
+    "address": "Rua Martins Barbosa, 356",
+    "neighborhood": "Benfica",
+    "phone": "(51) 3358-4770",
+    "hours": "Segunda a Sexta, 10h às 15h30",
+    "coordinates": { "lat": -21.687148973344076, "lng": -43.436655907010326 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "34",
+    "name": "Bahamas Mix Salvaterra",
+    "address": "Av. Deusdedith Salgado, 4992",
+    "neighborhood": "Salvaterra",
+    "phone": "(32) 3249-9496",
+    "hours": "Segunda a Domingo, 07h30 às 21h",
+    "coordinates": { "lat": -21.811571019565573, "lng": -43.375322821679816 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Bahamas Grama",
+    "address": "Rua Diomar Monteiro, 126",
+    "neighborhood": "Grama",
+    "phone": "(32) 3249-9470",
+    "hours": "Segunda a Domingo, 07h às 21h",
+    "coordinates": { "lat": -21.687780475620606, "lng": -43.34813304597313 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "36",
+    "name": "Bahamas Poço Rico",
+    "address": "Av. Francisco Valadares, 36",
+    "neighborhood": "Poço Rico",
+    "phone": "(32) 3249-9469",
+    "hours": "Segunda a Domingo, 07h às 21h",
+    "coordinates": { "lat": -21.764429586901436, "lng": -43.336361967393096 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "37",
+    "name": "Bahamas Mix Retiro",
+    "address": "Av. Dr. Francisco Álvares de Assis, 3000",
+    "neighborhood": "Retiro",
+    "phone": "(32) 9 9949-1078",
+    "hours": "Segunda a Domingo, 07h30 às 21h",
+    "coordinates": { "lat": -21.76379188668966, "lng": -43.289326748974865 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "38",
+    "name": "Bahamas Mix JK",
+    "address": "Av. Presidente Juscelino Kubitschek, 879",
+    "neighborhood": "Francisco Bernardino",
+    "phone": "(32) 3249-9459",
+    "hours": "Segunda a Domingo, 07h30 às 21h",
+    "coordinates": { "lat": -21.731999423904085, "lng": -43.39513325016108 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "39",
+    "name": "Bahamas Linhares",
+    "address": "Rua Diva Garcia, 1160",
+    "neighborhood": "Linhares",
+    "phone": "(32) 3249-9414",
+    "hours": "Segunda a Domingo, 07h às 21h",
+    "coordinates": { "lat": -21.73851134189796, "lng": -43.3318929471136 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "40",
+    "name": "Bahamas Santa Terezinha",
+    "address": "Rua Dr. José Eutrópio, 330",
+    "neighborhood": "Santa Terezinha",
+    "phone": "(32) 2104-9521",
+    "hours": "Segunda a Domingo, 07h às 21h",
+    "coordinates": { "lat": -21.740516738104027, "lng": -43.36536992222444 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "41",
+    "name": "Bar Birosca",
+    "address": "Rua Profa. Dalva Menezes, 23",
+    "neighborhood": "Jardim Glória",
+    "phone": "(32) 3026-3720",
+    "hours": "Segunda a Sexta, 11h às 14h e 18h às 23h",
+    "coordinates": { "lat": -21.75343456791604, "lng": -43.358728564980325 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
   }
 ]
