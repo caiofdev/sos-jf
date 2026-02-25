@@ -91,6 +91,17 @@
   color: var(--color-text-muted);
 }
 
+.ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  user-select: none;
+}
+
 @media (max-width: 600px) {
   .section {
     padding: 1.25rem 0.75rem;
@@ -107,6 +118,17 @@
 
   .pagination {
     justify-content: center;
+  }
+
+  .pageBtn {
+    min-width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1rem;
+  }
+
+  .ellipsis {
+    min-width: 2rem;
+    height: 2.6rem;
   }
 
   .pageInfo {
