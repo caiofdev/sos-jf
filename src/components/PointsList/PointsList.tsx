@@ -50,6 +50,15 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
           </p>
         </div>
 
+        <div className={styles.notice}>
+          <span className={styles.noticeIcon}>⚠️</span>
+          <p className={styles.noticeText}>
+            <strong>Atenção:</strong> sempre verifique as informações dos locais antes de se
+            deslocar. É recomendado ligar com antecedência para confirmar horários e a situação
+            atual do ponto de coleta.
+          </p>
+        </div>
+
         <div className={styles.grid}>
           {visiblePoints.map((point) => (
             <CollectionPointCard
