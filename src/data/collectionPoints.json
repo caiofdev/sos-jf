@@ -767,5 +767,35 @@
       "Ração para animais"
     ],
     "notes": "Funcionamento 24h."
+  },
+  {
+    "id": "43",
+    "name": "Escola Infantil Paraíso das Estrelinhas - Unidade 1",
+    "address": "Rua Paraíso de Alcântara, 62",
+    "neighborhood": "Barbosa Lage",
+    "phone": "(32) 9 8401-2210",
+    "hours": "Segunda a Sexta, 07h às 17h",
+    "coordinates": { "lat": -21.71386766094104, "lng": -43.40681681674006 },
+    "acceptedItems": [
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "44",
+    "name": "Escola Infantil Paraíso das Estrelinhas - Unidade 2",
+    "address": "R. Onofre De Oliveira Salles, 28",
+    "neighborhood": "Recanto da Mata",
+    "phone": "(32) 9 8401-2210",
+    "hours": "Segunda a Sexta, 07h às 17h",
+    "coordinates": { "lat": -21.71801346000958, "lng": -43.40373890275718 },
+    "acceptedItems": [
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
   }
 ]
