@@ -423,5 +423,20 @@
       "Produtos de limpeza",
       "Ração para animais"
     ]
+  },
+  {
+    "id": "21",
+    "name": "Comunidade Shalom Juiz de Fora",
+    "address": "Rua Dr. Antônio Carlos, 445",
+    "neighborhood": "Centro",
+    "phone": "(32) 9 9158-9103",
+    "hours": "Terça a Sábado, 13h às 19h",
+    "coordinates": { "lat": -21.767731186732814, "lng": -43.34723956063573 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
   }
 ]
