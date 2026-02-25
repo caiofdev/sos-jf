@@ -43,12 +43,12 @@
   },
   {
     "id": "3",
-    "name": "Conselho Tutelar Sul-Oeste",
-    "address": "Av. Rio Branco, 1843 / 1 andar (Prédio Cesama)",
-    "neighborhood": "Centro",
-    "phone": "(32) 3690-7397",
-    "hours": "24 horas",
-    "coordinates": { "lat": -21.757661441456747, "lng": -43.35047200852606 },
+    "name": "EPROS",
+    "address": "Rua Costa Carvalho, 30",
+    "neighborhood": "Costa Carvalho",
+    "phone": "(32) 9 9835-4528",
+    "hours": "Segunda a Sexta, 08h às 17h",
+    "coordinates": { "lat": -21.763214769421193, "lng": -43.33338980110883 },
     "acceptedItems": [
       "Roupas e calçados",
       "Alimentos não perecíveis",
@@ -60,7 +60,8 @@
       "Doação financeira",
       "Ração para animais"
     ],
-    "notes": "Funcionamento 24h."
+    "notes": "Esse local possui rotas de coleta Quinta e Sexta, caso tenha interesse, favor entrar em contato.",
+    "hasCollectionRoute": true
   },
   {
     "id": "4",
@@ -745,5 +746,26 @@
       "Produtos de higiene pessoal",
       "Produtos de limpeza"
     ]
+  },
+  {
+    "id": "42",
+    "name": "Conselho Tutelar Sul-Oeste",
+    "address": "Av. Rio Branco, 1843 / 1 andar (Prédio Cesama)",
+    "neighborhood": "Centro",
+    "phone": "(32) 3690-7397",
+    "hours": "24 horas",
+    "coordinates": { "lat": -21.757661441456747, "lng": -43.35047200852606 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Doação financeira",
+      "Ração para animais"
+    ],
+    "notes": "Funcionamento 24h."
   }
 ]

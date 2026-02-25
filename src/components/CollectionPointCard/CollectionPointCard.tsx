@@ -17,7 +17,14 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
       <div className={styles.top}>
         <div className={styles.pin}>📍</div>
         <div className={styles.info}>
-          <h3 className={styles.name}>{point.name}</h3>
+          <div className={styles.nameRow}>
+            <h3 className={styles.name}>{point.name}</h3>
+            {point.hasCollectionRoute && (
+              <span className={styles.routeBadge} title="Este local realiza rota de coleta">
+                🚚 Rota de coleta
+              </span>
+            )}
+          </div>
           <p className={styles.address}>
             {point.address} — <span className={styles.neighborhood}>{point.neighborhood}</span>
           </p>

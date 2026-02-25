@@ -11,4 +11,5 @@ export interface CollectionPoint {
   };
   acceptedItems: string[];
   notes: string;
+  hasCollectionRoute?: boolean;
 }
