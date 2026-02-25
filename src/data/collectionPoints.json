@@ -16,7 +16,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ],
     "notes": "Funcionamento 24h."
@@ -38,7 +37,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ],
     "notes": "Coordenação central da Defesa Civil. Qualquer dúvida entre em contato pelo telefone."
@@ -60,7 +58,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ],
     "notes": "Funcionamento 24h."
@@ -82,7 +79,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -103,7 +99,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -124,7 +119,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -145,7 +139,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -166,7 +159,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -187,7 +179,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -208,7 +199,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ],
     "notes": "Em frente à central de segurança."
@@ -230,7 +220,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ],
     "notes": "Até dia 06/03."
@@ -252,7 +241,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -273,7 +261,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -282,8 +269,8 @@
     "name": "Igreja Metodista em Bela Aurora",
     "address": "Rua Dr. Costa Reis, 380",
     "neighborhood": "Ipiranga",
-    "phone": "(32) 9 8886-8951",
-    "hours": "Terça a Domingo, Diversos horários",
+    "phone": "(32) 9 8846-5662",
+    "hours": "Segunda a Domingo, 08h às 21h",
     "coordinates": { "lat": -21.789459133496447, "lng": -43.35634660544787 },
     "acceptedItems": [
       "Roupas e calçados",
@@ -294,9 +281,9 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
-    ]
+    ],
+    "notes": "Todos os dias até normalizar."
   },
   {
     "id": "15",
@@ -315,7 +302,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -336,7 +322,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -357,7 +342,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -378,7 +362,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -399,7 +382,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -420,7 +402,6 @@
       "Medicamentos (lacrados)",
       "Produtos de limpeza",
       "Doação financeira",
-      "Produtos de limpeza",
       "Ração para animais"
     ]
   },
@@ -436,6 +417,91 @@
       "Roupas e calçados",
       "Alimentos não perecíveis",
       "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Garfão",
+    "address": "Av. Dr. Paulo Japiassu Coelho, 639",
+    "neighborhood": "Cascatinha",
+    "phone": "(33) 9 8435-5775",
+    "hours": "Segunda a Sábado, 11h às 14h30",
+    "coordinates": { "lat": -21.781854611989505, "lng": -43.363452002962745 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis"
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Igreja Metodista Central",
+    "address": "Rua Marechal Deodoro, 700",
+    "neighborhood": "Centro",
+    "phone": "(32) 3215-7703",
+    "hours": "Segunda a Sexta, 08h às 18h",
+    "coordinates": { "lat": -21.760222750789175, "lng": -43.35077457412704 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Igreja Metodista São Mateus",
+    "address": "Av. Itamar Franco, 1757",
+    "neighborhood": "São Mateus",
+    "phone": "(31) 98814-2087",
+    "hours": "Segunda a Sexta, 08h às 17h",
+    "coordinates": { "lat": -21.769868961498556, "lng": -43.35079010296324 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Igreja Metodista Jardinópolis",
+    "address": "Rua Três Ilhas, 96",
+    "neighborhood": "Santa Luzia",
+    "phone": "(28) 9 9933-7659",
+    "hours": "Segunda a Sexta, 08h30 às 10h30 e 14h às 17h30",
+    "coordinates": { "lat": -21.783258561008207, "lng": -43.34557160110855 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Igreja Metodista em Monte Castelo",
+    "address": "Rua Coronel Quintão, 543",
+    "neighborhood": "Monte Castelo",
+    "phone": "(31) 9 8774-0005",
+    "hours": "Segunda a Sexta, 08h às 18h",
+    "coordinates": { "lat": -21.746121369389353, "lng": -43.3810381008143 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
       "Produtos de limpeza"
     ]
   }
