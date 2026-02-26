@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "emoji": "🏠",
+    "title": "Abrigos disponíveis",
+    "description": "Estamos centralizando a quantidade de abrigos disponíveis em Juiz de Fora",
+    "cta": "Se você está fornecendo abrigo, entre nesse grupo",
+    "url": "https://chat.whatsapp.com/EZ9mV5NqIJGDfk22hiv8Ai?mode=gi_t",
+    "accent": "red"
+  },
+  {
+    "id": "2",
+    "emoji": "📦",
+    "title": "Pontos de Coleta",
+    "description": "Estamos centralizando os pontos de coleta disponíveis em Juiz de Fora",
+    "cta": "Se você é um ponto de coleta, entre nesse grupo",
+    "url": "https://chat.whatsapp.com/HLaOl8j0BDCBJRKZ3pQYGm?mode=gi_t",
+    "accent": "orange"
+  },
+  {
+    "id": "3",
+    "emoji": "🙋",
+    "title": "Voluntários",
+    "description": "Estamos centralizando os voluntários disponíveis em Juiz de Fora",
+    "cta": "Se você é um voluntário, entre nesse grupo",
+    "url": "https://chat.whatsapp.com/C31CDKGT5fV8PjIvu9BZmo?mode=gi_t",
+    "accent": "yellow"
+  }
+]

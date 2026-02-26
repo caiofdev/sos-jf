@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "emoji": "🆘",
+    "title": "SOS Juiz de Fora",
+    "description": "Plataforma colaborativa de apoio às vítimas das chuvas em JF",
+    "url": "https://sosjuizdefora.growberry.com.br/"
+  },
+  {
+    "id": "2",
+    "emoji": "🚧",
+    "title": "Interdições JF",
+    "description": "Mapa com as vias interditadas e pontos de bloqueio na cidade",
+    "url": "https://interdicoesjf.manus.space/"
+  },
+  {
+    "id": "3",
+    "emoji": "🗺️",
+    "title": "Mapeamento de Área de Risco JF",
+    "description": "Mapa oficial da Prefeitura com as áreas de risco geológico em Juiz de Fora",
+    "url": "https://www.pjf.mg.gov.br/subsecretarias/sspdc/mapeamento.php"
+  }
+]

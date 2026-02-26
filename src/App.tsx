@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import AlertBanner from './components/AlertBanner/AlertBanner'
 import MapView from './components/MapView/MapView'
 import PointsList from './components/PointsList/PointsList'
+import UsefulLinks from './components/UsefulLinks/UsefulLinks'
 import Footer from './components/Footer/Footer'
 import collectionPointsData from './data/collectionPoints.json'
 import type { CollectionPoint } from './types/CollectionPoint'
@@ -41,6 +42,7 @@ export default function App() {
           selectedId={selectedId}
           onSelect={handleCardSelect}
         />
+        <UsefulLinks />
       </main>
       <Footer />
     </>
