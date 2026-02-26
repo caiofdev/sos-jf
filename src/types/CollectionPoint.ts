@@ -1,5 +1,6 @@
 export interface CollectionPoint {
   id: string;
+  type: 'coleta' | 'abrigo';
   name: string;
   address: string;
   neighborhood: string;

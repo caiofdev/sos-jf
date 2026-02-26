@@ -1,17 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
 import AlertBanner from './components/AlertBanner/AlertBanner'
 import MapView from './components/MapView/MapView'
 import PointsList from './components/PointsList/PointsList'
 import UsefulLinks from './components/UsefulLinks/UsefulLinks'
 import Footer from './components/Footer/Footer'
-import collectionPointsData from './data/collectionPoints.json'
 import type { CollectionPoint } from './types/CollectionPoint'
 
-const collectionPoints = collectionPointsData as CollectionPoint[]
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxd41VzIFkF5z887wbdXV-xK1eXQvE33Q6wT0t4Ev-NmJs1LmJxeBQxm0qVZjgaHPY/exec'
 
 export default function App() {
+  const [collectionPoints, setCollectionPoints] = useState<CollectionPoint[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const [selectedId, setSelectedId] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch(SHEET_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error('Erro na resposta')
+        return res.json()
+      })
+      .then((data: CollectionPoint[]) => {
+        setCollectionPoints(data)
+        setLoading(false)
+      })
+      .catch(() => {
+        setError(true)
+        setLoading(false)
+      })
+  }, [])
 
   function handleCardSelect(id: string) {
     setSelectedId((prev) => (prev === id ? null : id))
@@ -37,11 +55,23 @@ export default function App() {
             onMarkerClick={handleMarkerClick}
           />
         </section>
-        <PointsList
-          points={collectionPoints}
-          selectedId={selectedId}
-          onSelect={handleCardSelect}
-        />
+        {loading && (
+          <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--color-text-muted)' }}>
+            Carregando pontos...
+          </div>
+        )}
+        {error && (
+          <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--color-red-light)' }}>
+            Erro ao carregar os pontos. Tente novamente mais tarde.
+          </div>
+        )}
+        {!loading && !error && (
+          <PointsList
+            points={collectionPoints}
+            selectedId={selectedId}
+            onSelect={handleCardSelect}
+          />
+        )}
         <UsefulLinks />
       </main>
       <Footer />
