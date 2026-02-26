@@ -11,7 +11,7 @@ export default function NoticeCard() {
         <p className={styles.noticeText}>
           <strong>Atenção:</strong> sempre verifique as informações dos locais antes de se
           deslocar. É recomendado ligar com antecedência para confirmar horários e a situação
-          atual do ponto de coleta.
+          atual do ponto de coleta. <strong>Todos os pontos inseridos foram validados pela nossa equipe.</strong>
         </p>
         <a className={styles.reportBtn} href={GMAIL_URL} target="_blank" rel="noopener noreferrer">
            Reportar informação incorreta
