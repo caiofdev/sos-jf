@@ -16,10 +16,19 @@ interface Props {
 export default function PointsList({ points, selectedId, onSelect }: Props) {
   const [currentPage, setCurrentPage] = useState(1)
   const [filter, setFilter] = useState<FilterType>('todos')
+  const [search, setSearch] = useState('')
 
-  const filteredPoints = filter === 'todos'
-    ? points
-    : points.filter((p) => p.type === filter)
+  const filteredPoints = points
+    .filter((p) => filter === 'todos' || p.type === filter)
+    .filter((p) => {
+      const q = search.toLowerCase().trim()
+      if (!q) return true
+      return (
+        p.name.toLowerCase().includes(q) ||
+        p.neighborhood.toLowerCase().includes(q) ||
+        p.address.toLowerCase().includes(q)
+      )
+    })
 
   const totalPages = Math.ceil(filteredPoints.length / PAGE_SIZE)
   const start = (currentPage - 1) * PAGE_SIZE
@@ -27,7 +36,7 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [filter])
+  }, [filter, search])
 
   useEffect(() => {
     if (!selectedId) return
@@ -69,18 +78,48 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
           totalAbrigo={points.filter((p) => p.type === 'abrigo').length}
         />
 
+        <div className={styles.searchWrapper}>
+          <svg className={styles.searchIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            className={styles.searchInput}
+            type="text"
+            placeholder="Pesquisar por nome, bairro ou endereço..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            aria-label="Pesquisar pontos"
+          />
+          {search && (
+            <button className={styles.searchClear} onClick={() => setSearch('')} aria-label="Limpar pesquisa">
+              ×
+            </button>
+          )}
+        </div>
+
         <NoticeCard />
 
-        <div className={styles.grid}>
-          {visiblePoints.map((point) => (
-            <CollectionPointCard
-              key={point.id}
-              point={point}
-              isSelected={selectedId === point.id}
-              onSelect={onSelect}
-            />
-          ))}
-        </div>
+        {filteredPoints.length === 0 ? (
+          <div className={styles.empty}>
+            <span className={styles.emptyIcon}>🔍</span>
+            <p>Nenhum ponto encontrado para <strong>"{search}"</strong></p>
+            <button className={styles.emptyClear} onClick={() => { setSearch(''); setFilter('todos') }}>
+              Limpar filtros
+            </button>
+          </div>
+        ) : (
+          <div className={styles.grid}>
+            {visiblePoints.map((point) => (
+              <CollectionPointCard
+                key={point.id}
+                point={point}
+                isSelected={selectedId === point.id}
+                onSelect={onSelect}
+              />
+            ))}
+          </div>
+        )}
 
         {totalPages > 1 && (
           <div className={styles.pagination}>
