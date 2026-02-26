@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.count {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Todos ativo */
+.active {
+  background: var(--color-surface-2);
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+/* Coleta */
+.btnColeta:hover {
+  border-color: var(--color-red-light);
+  color: var(--color-red-light);
+}
+
+.activeColeta {
+  border-color: var(--color-red-light) !important;
+  color: var(--color-red-light) !important;
+  background: rgba(231, 76, 60, 0.08) !important;
+}
+
+.activeColeta .count {
+  background: rgba(231, 76, 60, 0.15);
+}
+
+/* Abrigo */
+.btnAbrigo:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.activeAbrigo {
+  border-color: #60a5fa !important;
+  color: #60a5fa !important;
+  background: rgba(59, 130, 246, 0.08) !important;
+}
+
+.activeAbrigo .count {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+@media (max-width: 600px) {
+  .btn {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.7rem;
+  }
+}

@@ -15,15 +15,20 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
       id={`point-${point.id}`}
     >
       <div className={styles.top}>
-        <div className={styles.pin}>📍</div>
+        <div className={styles.pin}>{point.type === 'abrigo' ? '🏠' : '📍'}</div>
         <div className={styles.info}>
           <div className={styles.nameRow}>
             <h3 className={styles.name}>{point.name}</h3>
-            {point.hasCollectionRoute && (
-              <span className={styles.routeBadge} title="Este local realiza rota de coleta">
-                🚚 Rota de coleta
+            <div className={styles.badgeGroup}>
+              <span className={point.type === 'abrigo' ? styles.abrigoBadge : styles.coletaBadge}>
+                {point.type === 'abrigo' ? 'Abrigo' : 'Ponto de Coleta'}
               </span>
-            )}
+              {point.hasCollectionRoute && (
+                <span className={styles.routeBadge} title="Este local realiza rota de coleta">
+                  🚚 Rota de coleta
+                </span>
+              )}
+            </div>
           </div>
           <p className={styles.address}>
             {point.address} — <span className={styles.neighborhood}>{point.neighborhood}</span>

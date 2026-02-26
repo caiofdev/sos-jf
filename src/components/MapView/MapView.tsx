@@ -26,6 +26,16 @@ const redIcon = new L.Icon({
   shadowSize: [41, 41],
 })
 
+const blueIcon = new L.Icon({
+  iconUrl:
+    'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+})
+
 interface Props {
   points: CollectionPoint[]
   selectedId: string | null
@@ -67,12 +77,14 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
           <Marker
             key={point.id}
             position={[point.coordinates.lat, point.coordinates.lng]}
-            icon={redIcon}
+            icon={point.type === 'abrigo' ? blueIcon : redIcon}
             eventHandlers={{ click: () => onMarkerClick(point.id) }}
           >
             <Popup>
               <div className={styles.popup}>
                 <strong>{point.name}</strong>
+                <br />
+                <span>{point.type === 'abrigo' ? '🏠 Abrigo' : '📦 Ponto de Coleta'}</span>
                 <br />
                 <span>{point.address}, {point.neighborhood}</span>
                 <br />
@@ -92,6 +104,17 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
           📍 Ponto selecionado — veja os detalhes na lista abaixo
         </div>
       )}
+
+      <div className={styles.legend}>
+        <div className={styles.legendItem}>
+          <span className={styles.legendDot} style={{ background: '#e74c3c' }} />
+          Ponto de Coleta
+        </div>
+        <div className={styles.legendItem}>
+          <span className={styles.legendDot} style={{ background: '#3b82f6' }} />
+          Abrigo
+        </div>
+      </div>
     </div>
   )
 }

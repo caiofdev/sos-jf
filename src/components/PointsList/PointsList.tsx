@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import CollectionPointCard from '../CollectionPointCard/CollectionPointCard'
 import NoticeCard from '../NoticeCard/NoticeCard'
+import PointsFilter, { type FilterType } from '../PointsFilter/PointsFilter'
 import styles from './PointsList.module.css'
 
 const PAGE_SIZE = 6
@@ -14,18 +15,27 @@ interface Props {
 
 export default function PointsList({ points, selectedId, onSelect }: Props) {
   const [currentPage, setCurrentPage] = useState(1)
+  const [filter, setFilter] = useState<FilterType>('todos')
 
-  const totalPages = Math.ceil(points.length / PAGE_SIZE)
+  const filteredPoints = filter === 'todos'
+    ? points
+    : points.filter((p) => p.type === filter)
+
+  const totalPages = Math.ceil(filteredPoints.length / PAGE_SIZE)
   const start = (currentPage - 1) * PAGE_SIZE
-  const visiblePoints = points.slice(start, start + PAGE_SIZE)
+  const visiblePoints = filteredPoints.slice(start, start + PAGE_SIZE)
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [filter])
 
   useEffect(() => {
     if (!selectedId) return
-    const index = points.findIndex((p) => p.id === selectedId)
+    const index = filteredPoints.findIndex((p) => p.id === selectedId)
     if (index === -1) return
     const page = Math.floor(index / PAGE_SIZE) + 1
     setCurrentPage(page)
-  }, [selectedId, points])
+  }, [selectedId, filteredPoints])
 
   function goToPage(page: number) {
     setCurrentPage(page)
@@ -45,11 +55,19 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
     <section className={styles.section} id="pontos">
       <div className={styles.inner}>
         <div className={styles.heading}>
-          <h2 className={styles.title}>Pontos de Coleta</h2>
+          <h2 className={styles.title}>Pontos de Coleta e Abrigos</h2>
           <p className={styles.subtitle}>
             Clique em um ponto para destacá-lo no mapa. Leve suas doações diretamente ao local.
           </p>
         </div>
+
+        <PointsFilter
+          active={filter}
+          onChange={setFilter}
+          totalAll={points.length}
+          totalColeta={points.filter((p) => p.type === 'coleta').length}
+          totalAbrigo={points.filter((p) => p.type === 'abrigo').length}
+        />
 
         <NoticeCard />
 
@@ -101,7 +119,7 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
             </button>
 
             <span className={styles.pageInfo}>
-              {start + 1}–{Math.min(start + PAGE_SIZE, points.length)} de {points.length} pontos
+              {start + 1}–{Math.min(start + PAGE_SIZE, filteredPoints.length)} de {filteredPoints.length} pontos
             </span>
           </div>
         )}

@@ -46,7 +46,10 @@ export default function App() {
   return (
     <>
       <Header />
-      <AlertBanner totalPoints={collectionPoints.length} />
+      <AlertBanner
+        totalPoints={collectionPoints.filter((p) => p.type === 'coleta').length}
+        totalShelters={collectionPoints.filter((p) => p.type === 'abrigo').length}
+      />
       <main>
         <section id="mapa">
           <MapView
