@@ -797,5 +797,39 @@
       "Produtos de higiene pessoal",
       "Produtos de limpeza"
     ]
+  },
+  {
+    "id": "45",
+    "name": "IF Sudeste MG - Reitoria",
+    "address": "Av. Luz Interior, 360",
+    "neighborhood": "Bairro Estrela Sul",
+    "phone": "(32) 4009-3006",
+    "hours": "Segunda a Sexta, 07h às 17h",
+    "coordinates": { "lat": -21.783050834184934, "lng": -43.355900946200016 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Produtos de higiene pessoal",
+      "Produtos de limpeza"
+    ]
+  },
+  {
+    "id": "46",
+    "name": "Resenha Beach",
+    "address": "Av. Presidente Juscelino Kubitschek, 4961",
+    "neighborhood": "Nova Era",
+    "phone": "(32) 9 9953-8743",
+    "hours": "Segunda a Domingo, 07h às 22h",
+    "coordinates": { "lat": -21.705581712409334, "lng": -43.41767851329996 },
+    "acceptedItems": [
+      "Roupas e calçados",
+      "Alimentos não perecíveis",
+      "Água mineral",
+      "Cobertores, Colchões e Travesseiros",
+      "Produtos de higiene pessoal",
+      "Medicamentos (lacrados)",
+      "Produtos de limpeza",
+      "Ração para animais"
+    ]
   }
 ]
