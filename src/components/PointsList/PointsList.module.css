@@ -39,10 +39,26 @@
   color: var(--color-text-muted);
 }
 
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.controlsRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
 .searchWrapper {
   position: relative;
   display: flex;
   align-items: center;
+  width: 220px;
 }
 
 .searchIcon {
@@ -57,12 +73,12 @@
 
 .searchInput {
   width: 100%;
-  background: var(--color-surface-2);
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  padding: 0.55rem 2.5rem 0.55rem 2.4rem;
-  font-size: 0.85rem;
-  color: var(--color-text);
+  padding: 0.5rem 2.5rem 0.5rem 2.4rem;
+  font-size: 0.82rem;
+  color: #000000;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -92,6 +108,35 @@
 
 .searchClear:hover {
   color: var(--color-text);
+}
+
+.registerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--color-red);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.registerBtn:hover {
+  background: var(--color-red-light);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.registerIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
 }
 
 .grid {
@@ -160,6 +205,25 @@
 @media (max-width: 600px) {
   .section {
     padding: 1.25rem 0.75rem;
+  }
+
+  .controlsRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controlsRight {
+    width: 100%;
+  }
+
+  .searchWrapper {
+    width: 100%;
+    flex: 1;
+  }
+
+  .registerBtn {
+    width: 100%;
+    justify-content: center;
   }
 
   .grid {
