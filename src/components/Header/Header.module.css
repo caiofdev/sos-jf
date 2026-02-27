@@ -74,6 +74,13 @@
   font-size: 0.9rem;
 }
 
+.service {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
 .divider {
   color: var(--color-border);
 }

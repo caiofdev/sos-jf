@@ -17,17 +17,13 @@ export default function Header() {
       </div>
 
       <div className={styles.emergencyBar}>
-        <span>🚨 Defesa Civil:</span>
-        <a href="tel:199">199</a>
+        <span className={styles.service}><span>🚨 Defesa Civil:</span><a href="tel:199">199</a></span>
         <span className={styles.divider}>|</span>
-        <span>🚒 Bombeiros:</span>
-        <a href="tel:193">193</a>
+        <span className={styles.service}><span>🚒 Bombeiros:</span><a href="tel:193">193</a></span>
         <span className={styles.divider}>|</span>
-        <span>🚑 SAMU:</span>
-        <a href="tel:192">192</a>
+        <span className={styles.service}><span>🚑 SAMU:</span><a href="tel:192">192</a></span>
         <span className={styles.divider}>|</span>
-        <span>🚓 Polícia Militar:</span>
-        <a href="tel:190">190</a>
+        <span className={styles.service}><span>🚓 Polícia Militar:</span><a href="tel:190">190</a></span>
       </div>
     </header>
   )
