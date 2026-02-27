@@ -7,7 +7,7 @@ import UsefulLinks from './components/UsefulLinks/UsefulLinks'
 import Footer from './components/Footer/Footer'
 import type { CollectionPoint } from './types/CollectionPoint'
 
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxd41VzIFkF5z887wbdXV-xK1eXQvE33Q6wT0t4Ev-NmJs1LmJxeBQxm0qVZjgaHPY/exec'
+const SHEET_URL = 'https://v1.sos-jf.workers.dev/'
 
 export default function App() {
   const [collectionPoints, setCollectionPoints] = useState<CollectionPoint[]>([])
