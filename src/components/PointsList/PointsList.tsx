@@ -38,14 +38,6 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
     setCurrentPage(1)
   }, [filter, search])
 
-  useEffect(() => {
-    if (!selectedId) return
-    const index = filteredPoints.findIndex((p) => p.id === selectedId)
-    if (index === -1) return
-    const page = Math.floor(index / PAGE_SIZE) + 1
-    setCurrentPage(page)
-  }, [selectedId, filteredPoints])
-
   function goToPage(page: number) {
     setCurrentPage(page)
     document.getElementById('pontos')?.scrollIntoView({ behavior: 'smooth', block: 'start' })

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import styles from './CollectionPointCard.module.css'
 
@@ -8,10 +9,16 @@ interface Props {
 }
 
 export default function CollectionPointCard({ point, isSelected, onSelect }: Props) {
+  const [copied, setCopied] = useState(false)
+
+  function copyPhone() {
+    navigator.clipboard.writeText(point.phone.replace(/\D/g, ''))
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
   return (
     <article
       className={`${styles.card} ${isSelected ? styles.selected : ''}`}
-      onClick={() => onSelect(point.id)}
       id={`point-${point.id}`}
     >
       <div className={styles.top}>
@@ -42,14 +49,23 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
           {point.hours}
         </span>
         {point.phone && (
-          <a
-            href={`tel:${point.phone.replace(/\D/g, '')}`}
-            className={styles.phone}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className={styles.metaIcon}>📞</span>
-            {point.phone}
-          </a>
+          <div className={styles.phoneRow}>
+            <a
+              href={`tel:${point.phone.replace(/\D/g, '')}`}
+              className={styles.phone}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className={styles.metaIcon}>📞</span>
+              {point.phone}
+            </a>
+            <button
+              className={`${styles.copyBtn} ${copied ? styles.copyBtnDone : ''}`}
+              onClick={(e) => { e.stopPropagation(); copyPhone() }}
+              title="Copiar número"
+            >
+              {copied ? '✓' : '📋'}
+            </button>
+          </div>
         )}
       </div>
 
@@ -69,6 +85,15 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
           <span className={styles.notesIcon}>ℹ️</span> {point.notes}
         </p>
       )}
+
+      <div className={styles.cardFooter}>
+        <button
+          className={styles.mapBtn}
+          onClick={() => onSelect(point.id)}
+        >
+          🗳️ Ver no mapa
+        </button>
+      </div>
     </article>
   )
 }

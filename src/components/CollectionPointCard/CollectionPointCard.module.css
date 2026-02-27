@@ -3,15 +3,13 @@
   border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 1rem 1.25rem;
-  cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  transition: border-color 0.2s, box-shadow 0.2s;
   scroll-margin-top: 1rem;
 }
 
 .card:hover {
-  border-color: var(--color-red);
-  box-shadow: 0 0 12px rgba(231, 76, 60, 0.18);
-  transform: translateY(-1px);
+  border-color: rgba(231, 76, 60, 0.35);
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.1);
 }
 
 .selected {
@@ -153,6 +151,35 @@
   gap: 0.3rem;
 }
 
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.copyBtn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  line-height: 1.4;
+}
+
+.copyBtn:hover {
+  border-color: var(--color-red);
+  color: var(--color-red-light);
+}
+
+.copyBtnDone {
+  border-color: #27ae60;
+  color: #27ae60;
+  background: rgba(39, 174, 96, 0.1);
+}
+
 .items {
   margin-bottom: 0.85rem;
 }
@@ -198,6 +225,34 @@
 
 .notesIcon {
   flex-shrink: 0;
+}
+
+.cardFooter {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mapBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px solid var(--color-red);
+  border-radius: 6px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-red-light);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mapBtn:hover {
+  background: var(--color-red);
+  color: #fff;
 }
 
 @media (max-width: 600px) {
