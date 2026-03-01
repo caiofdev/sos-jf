@@ -1,0 +1,179 @@
+.toggleBtn {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 3.5rem;
+  z-index: 500;
+  background: rgba(15, 17, 23, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.toggleBtn:hover {
+  border-color: #3b82f6;
+  color: #60a5fa;
+}
+
+.panel {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 3.5rem;
+  z-index: 500;
+  background: rgba(15, 17, 23, 0.96);
+  border: 1px solid #3b82f6;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  min-width: 260px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panelTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-family: inherit;
+  padding: 0.35rem 0.6rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.input:disabled {
+  opacity: 0.5;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: var(--color-red-light);
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.calcBtn {
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.calcBtn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.calcBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.clearBtn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.clearBtn:hover {
+  border-color: var(--color-red);
+  color: var(--color-red-light);
+}
+
+@media (max-width: 600px) {
+  .toggleBtn {
+    left: 1.5rem;
+    bottom: 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .panel {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.25rem;
+    min-width: unset;
+    max-width: unset;
+    width: auto;
+  }
+}
