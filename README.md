@@ -1,22 +1,22 @@
-# SOS JF 🆘
+# SOS JF - Aplicação para centralizar pontos de coletas e abrigos
 
 Plataforma de emergência para a cidade de **Juiz de Fora/MG**, centralizando informações sobre pontos de coleta de doações e abrigos disponíveis para a população em situações de crise.
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
-- [Leaflet](https://leafletjs.com/) — mapa interativo
-- [Google Apps Script](https://developers.google.com/apps-script) — backend e geocodificação
-- [Google Sheets](https://sheets.google.com/) — banco de dados
-- [OpenCage Geocoding API](https://opencagedata.com/) — conversão de endereços em coordenadas
-- [GH Pages](https://github.com/) — deploy
+- [Leaflet](https://leafletjs.com/) 
+- [Google Apps Script](https://developers.google.com/apps-script)
+- [Google Sheets](https://sheets.google.com/) 
+- [OpenCage Geocoding API](https://opencagedata.com/) 
+- [GH Pages](https://github.com/) 
 
 ---
 
-## ▶️ Como executar o projeto
+## Como executar o projeto
 
 ### Pré-requisitos
 
@@ -49,18 +49,18 @@ npm run deploy
 
 ---
 
-## 🗺️ Arquitetura da aplicação
+## Arquitetura da aplicação
 
 Em breve.
 
 ---
 
-## �️ Roadmap
+## Roadmap
 
 Em breve.
 
 ---
 
-## �📄 Licença
+## Licença
 
 Este projeto é de uso comunitário, desenvolvido para auxiliar a população de Juiz de Fora em situações de emergência.
