@@ -12,7 +12,7 @@ Plataforma de emergência para a cidade de **Juiz de Fora/MG**, centralizando in
 - [Google Apps Script](https://developers.google.com/apps-script) — backend e geocodificação
 - [Google Sheets](https://sheets.google.com/) — banco de dados
 - [OpenCage Geocoding API](https://opencagedata.com/) — conversão de endereços em coordenadas
-- [Vercel](https://vercel.com/) — deploy
+- [GH Pages](https://github.com/) — deploy
 
 ---
 
