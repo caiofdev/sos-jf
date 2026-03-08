@@ -71,13 +71,68 @@
 
 .popup {
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.3;
   color: #1a1a2e;
-  min-width: 160px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
 }
 
 .popup strong {
   font-size: 0.9rem;
+}
+
+.popupPhoneRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.popupPhone {
+  color: #c0392b;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.popupCopyBtn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.15s, color 0.15s;
+  line-height: 1.4;
+}
+
+.popupCopyBtn:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+.popupCopyBtnDone {
+  border-color: #27ae60 !important;
+  color: #27ae60 !important;
+}
+
+.popupActions {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.popupReportBtn {
+  font-size: 0.75rem;
+  color: #e67e22;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.popupReportBtn:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

@@ -8,6 +8,54 @@ import { isNearRoute } from '../../utils/routeGeometry'
 import RoutePanel from '../RoutePanel/RoutePanel'
 import styles from './MapView.module.css'
 
+const GMAIL_BASE =
+  'https://mail.google.com/mail/?view=cm&to=caiofreis2005@gmail.com&su=Informa%C3%A7%C3%B5es+incorretas+%E2%80%94+SOS+JF&body=Ol%C3%A1%2C%0A%0AIdentifiquei+uma+informa%C3%A7%C3%A3o+incorreta+no+site+SOS+JF%3A%0A%0ALocal%3A+'
+
+function PointPopup({ point }: { point: CollectionPoint }) {
+  const [copied, setCopied] = useState(false)
+
+  function copyPhone() {
+    navigator.clipboard.writeText(point.phone.replace(/\D/g, ''))
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  const reportUrl = GMAIL_BASE + encodeURIComponent(point.name) + '%0AProblema%3A+'
+
+  return (
+    <div className={styles.popup}>
+      <strong>{point.name}</strong>
+      <span>{point.type === 'abrigo' ? '🏠 Abrigo' : '📦 Ponto de Coleta'}</span>
+      <span>{point.address}, {point.neighborhood}</span>
+      <span>⏰ {point.hours}</span>
+      {point.phone && (
+        <div className={styles.popupPhoneRow}>
+          <a href={`tel:${point.phone.replace(/\D/g, '')}`} className={styles.popupPhone}>
+            📞 {point.phone}
+          </a>
+          <button
+            className={`${styles.popupCopyBtn} ${copied ? styles.popupCopyBtnDone : ''}`}
+            onClick={copyPhone}
+            title="Copiar número"
+          >
+            {copied ? '✓' : '📋'}
+          </button>
+        </div>
+      )}
+      <div className={styles.popupActions}>
+        <a
+          href={reportUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.popupReportBtn}
+        >
+          ⚠️ Reportar informação incorreta
+        </a>
+      </div>
+    </div>
+  )
+}
+
 interface Props {
   points: CollectionPoint[]
   selectedId: string | null
@@ -79,19 +127,7 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
               eventHandlers={{ click: () => onMarkerClick(point.id) }}
             >
               <Popup>
-                <div className={styles.popup}>
-                  <strong>{point.name}</strong>
-                  <br />
-                  <span>{point.type === 'abrigo' ? '🏠 Abrigo' : '📦 Ponto de Coleta'}</span>
-                  <br />
-                  <span>{point.address}, {point.neighborhood}</span>
-                  <br />
-                  <span>⏰ {point.hours}</span>
-                  <br />
-                  {point.phone && (
-                    <a href={`tel:${point.phone.replace(/\D/g, '')}`}>{point.phone}</a>
-                  )}
-                </div>
+                <PointPopup point={point} />
               </Popup>
             </Marker>
           )
