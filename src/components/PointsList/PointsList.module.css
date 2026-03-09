@@ -78,7 +78,7 @@
   border-radius: 8px;
   padding: 0.5rem 2.5rem 0.5rem 2.4rem;
   font-size: 0.82rem;
-  color: #000000;
+  color: white;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
