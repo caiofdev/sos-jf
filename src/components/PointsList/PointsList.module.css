@@ -73,7 +73,7 @@
 
 .searchInput {
   width: 100%;
-  background: #ffffff;
+  background: #2e3450;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 0.5rem 2.5rem 0.5rem 2.4rem;
