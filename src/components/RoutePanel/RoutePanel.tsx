@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { RouteResult } from '../../types/Route'
 import { geocode, getGPSCoords, calculateRoute } from '../../services/routeService'
 import styles from './RoutePanel.module.css'
+import { Map } from 'lucide-react';
 
 interface Props {
   onResult: (result: RouteResult | null) => void
@@ -50,7 +51,8 @@ export default function RoutePanel({ onResult }: Props) {
   if (!open) {
     return (
       <button className={styles.toggleBtn} onClick={() => setOpen(true)}>
-        🗺️ Traçar rota
+        <Map className={styles.panelMapIcon} />
+        Traçar rota
       </button>
     )
   }
@@ -58,7 +60,10 @@ export default function RoutePanel({ onResult }: Props) {
   return (
     <div className={styles.panel}>
       <div className={styles.panelHeader}>
-        <span className={styles.panelTitle}>🗺️ Traçar rota</span>
+        <span className={styles.panelTitle}>
+          <Map className={styles.panelMapIcon} />
+          Traçar rota
+        </span>
         <button className={styles.closeBtn} onClick={() => { setOpen(false); handleClear() }}>✕</button>
       </div>
 

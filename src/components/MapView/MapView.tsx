@@ -5,6 +5,7 @@ import type { CollectionPoint } from '../../types/CollectionPoint'
 import type { RouteResult } from '../../types/Route'
 import { redIcon, blueIcon, greenIcon } from '../../utils/mapIcons'
 import { isNearRoute } from '../../utils/routeGeometry'
+import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map} from 'lucide-react';
 import RoutePanel from '../RoutePanel/RoutePanel'
 import styles from './MapView.module.css'
 
@@ -14,7 +15,8 @@ const GMAIL_BASE =
 function PointPopup({ point }: { point: CollectionPoint }) {
   const [copied, setCopied] = useState(false)
 
-  function copyPhone() {
+  function copyPhone(e: React.MouseEvent) {
+    e.stopPropagation()
     navigator.clipboard.writeText(point.phone.replace(/\D/g, ''))
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -25,20 +27,28 @@ function PointPopup({ point }: { point: CollectionPoint }) {
   return (
     <div className={styles.popup}>
       <strong>{point.name}</strong>
-      <span>{point.type === 'abrigo' ? '🏠 Abrigo' : '📦 Ponto de Coleta'}</span>
-      <span>{point.address}, {point.neighborhood}</span>
-      <span>⏰ {point.hours}</span>
+      <span className={styles.popupRow}>
+        {point.type === "abrigo" ? <House className={styles.popupHouseIcon} /> : <Package className={styles.popupPackageIcon} />}
+        {point.type === "abrigo" ? "Abrigo" : "Ponto de Coleta"}
+      </span>
+      <span className={styles.popupRow}>
+        <MapPin className={styles.popupMapPinIcon} /> {point.address}, {point.neighborhood}
+      </span>
+      <span className={styles.popupRow}>
+        <Clock className={styles.popupClockIcon}/> {point.hours}
+      </span>
       {point.phone && (
         <div className={styles.popupPhoneRow}>
-          <a href={`tel:${point.phone.replace(/\D/g, '')}`} className={styles.popupPhone}>
-            📞 {point.phone}
+          <Phone className={styles.popupPhoneIcon} />
+          <a href={`tel:${point.phone.replace(/\D/g, '')}`} className={styles.popupPhone} title='Ligar'>
+            {point.phone}
           </a>
           <button
             className={`${styles.popupCopyBtn} ${copied ? styles.popupCopyBtnDone : ''}`}
             onClick={copyPhone}
             title="Copiar número"
           >
-            {copied ? '✓' : '📋'}
+            {copied ? <CopyCheck className={styles.popupCopyCheckIcon} /> : <Copy className={styles.popupCopyIcon} />}
           </button>
         </div>
       )}
@@ -49,7 +59,8 @@ function PointPopup({ point }: { point: CollectionPoint }) {
           rel="noopener noreferrer"
           className={styles.popupReportBtn}
         >
-          ⚠️ Reportar informação incorreta
+          <AlertTriangle className={styles.popupAlertIcon} />
+          Reportar informação incorreta
         </a>
       </div>
     </div>
@@ -138,7 +149,8 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
 
       {routeInfo && (
         <div className={styles.routeSummary}>
-          🗺️ {routeInfo.distanceKm} km — {routeInfo.durationMin} min de carro
+          <Map className={styles.mapIcon} />
+          {routeInfo.distanceKm} km — {routeInfo.durationMin} min de carro
           {nearbyIds.size > 0 && (
             <span className={styles.nearbyCount}>
               • {nearbyIds.size} ponto{nearbyIds.size > 1 ? 's' : ''} na rota
