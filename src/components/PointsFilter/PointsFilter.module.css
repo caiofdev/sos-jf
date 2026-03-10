@@ -55,6 +55,11 @@
 .activeColeta .count {
   background: rgba(231, 76, 60, 0.15);
 }
+.packageIcon {
+  color: var(--color-red-light);
+  width: 1rem;
+  height: 1rem;
+}
 
 /* Abrigo */
 .btnAbrigo:hover {
@@ -70,6 +75,12 @@
 
 .activeAbrigo .count {
   background: rgba(59, 130, 246, 0.15);
+}
+
+.houseIcon {
+  color: #60a5fa;
+  width: 1rem;
+  height: 1rem;
 }
 
 @media (max-width: 600px) {

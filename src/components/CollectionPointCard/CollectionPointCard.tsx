@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import styles from './CollectionPointCard.module.css'
+import { House, MapPinned, Truck, Clock, Phone, CopyCheck, Copy, Info, Map} from 'lucide-react'
 
 interface Props {
   point: CollectionPoint
@@ -22,7 +23,10 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
       id={`point-${point.id}`}
     >
       <div className={styles.top}>
-        <div className={styles.pin}>{point.type === 'abrigo' ? '🏠' : '📍'}</div>
+        <div className={styles.pin}>
+          {point.type === 'abrigo' ? 
+            <House className={styles.houseIcon}/> : <MapPinned className={styles.mapPinIcon} />}
+        </div>
         <div className={styles.info}>
           <div className={styles.nameRow}>
             <h3 className={styles.name}>{point.name}</h3>
@@ -32,7 +36,8 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
               </span>
               {point.hasCollectionRoute && (
                 <span className={styles.routeBadge} title="Este local realiza rota de coleta">
-                  🚚 Rota de coleta
+                  <Truck size={16} />
+                  Rota de coleta
                 </span>
               )}
             </div>
@@ -45,7 +50,7 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
 
       <div className={styles.meta}>
         <span className={styles.metaItem}>
-          <span className={styles.metaIcon}>⏰</span>
+          <Clock size={14}/>
           {point.hours}
         </span>
         {point.phone && (
@@ -54,8 +59,9 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
               href={`tel:${point.phone.replace(/\D/g, '')}`}
               className={styles.phone}
               onClick={(e) => e.stopPropagation()}
+              title='Ligar'
             >
-              <span className={styles.metaIcon}>📞</span>
+              <Phone className={styles.phoneIcon}/>
               {point.phone}
             </a>
             <button
@@ -63,7 +69,7 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
               onClick={(e) => { e.stopPropagation(); copyPhone() }}
               title="Copiar número"
             >
-              {copied ? '✓' : '📋'}
+              {copied ? <CopyCheck className={styles.copyCheckIcon} /> : <Copy className={styles.copyIcon} />}
             </button>
           </div>
         )}
@@ -81,17 +87,19 @@ export default function CollectionPointCard({ point, isSelected, onSelect }: Pro
       </div>
 
       {point.notes && (
-        <p className={styles.notes}>
-          <span className={styles.notesIcon}>ℹ️</span> {point.notes}
-        </p>
+        <div className={styles.notes}>
+          <Info className={styles.infoIcon}/>
+          {point.notes}
+        </div>
       )}
 
       <div className={styles.cardFooter}>
         <button
           className={styles.mapBtn}
           onClick={() => onSelect(point.id)}
-        >
-          🗳️ Ver no mapa
+        > 
+          <Map size={16}/>
+          Ver no mapa
         </button>
       </div>
     </article>

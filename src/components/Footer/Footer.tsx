@@ -1,3 +1,4 @@
+import { CircleCheckBig } from 'lucide-react'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -18,12 +19,12 @@ export default function Footer() {
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>O que doar?</h3>
           <ul className={styles.list}>
-            <li>✅ Alimentos não perecíveis</li>
-            <li>✅ Água mineral e garrafas plásticas</li>
-            <li>✅ Roupas, calçados e cobertores</li>
-            <li>✅ Produtos de higiene pessoal</li>
-            <li>✅ Medicamentos lacrados</li>
-            <li>✅ Fraldas adultas e infantis</li>
+            <li><CircleCheckBig className={styles.check}/> Alimentos não perecíveis</li>
+            <li><CircleCheckBig className={styles.check}/> Água mineral e garrafas plásticas</li>
+            <li><CircleCheckBig className={styles.check}/> Roupas, calçados e cobertores</li>
+            <li><CircleCheckBig className={styles.check}/> Produtos de higiene pessoal</li>
+            <li><CircleCheckBig className={styles.check}/> Medicamentos lacrados</li>
+            <li><CircleCheckBig className={styles.check}/> Fraldas adultas e infantis</li>
           </ul>
         </div>
 

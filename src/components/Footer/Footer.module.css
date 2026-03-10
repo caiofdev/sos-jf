@@ -117,6 +117,12 @@
   opacity: 0.7;
 }
 
+.check{
+  width: 1rem;
+  height: 1rem;
+  color: #27ae60;
+}
+
 @media (max-width: 600px) {
   .inner {
     grid-template-columns: 1fr 1fr;

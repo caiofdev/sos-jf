@@ -1,3 +1,4 @@
+import { House, Package } from 'lucide-react'
 import styles from './PointsFilter.module.css'
 
 export type FilterType = 'todos' | 'coleta' | 'abrigo'
@@ -24,14 +25,16 @@ export default function PointsFilter({ active, onChange, totalAll, totalColeta, 
         className={`${styles.btn} ${styles.btnColeta} ${active === 'coleta' ? styles.activeColeta : ''}`}
         onClick={() => onChange('coleta')}
       >
-        📦 Pontos de Coleta
+        <Package className={styles.packageIcon} />
+        Pontos de Coleta
         <span className={styles.count}>{totalColeta}</span>
       </button>
       <button
         className={`${styles.btn} ${styles.btnAbrigo} ${active === 'abrigo' ? styles.activeAbrigo : ''}`}
         onClick={() => onChange('abrigo')}
       >
-        🏠 Abrigos
+        <House className={styles.houseIcon} />
+        Abrigos
         <span className={styles.count}>{totalAbrigo}</span>
       </button>
     </div>

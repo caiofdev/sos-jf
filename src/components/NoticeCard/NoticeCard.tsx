@@ -1,3 +1,4 @@
+import { TriangleAlert } from 'lucide-react'
 import styles from './NoticeCard.module.css'
 
 const GMAIL_URL =
@@ -6,7 +7,7 @@ const GMAIL_URL =
 export default function NoticeCard() {
   return (
     <div className={styles.notice}>
-      <span className={styles.noticeIcon}>⚠️</span>
+      <TriangleAlert className={styles.alertIcon}/>
       <div className={styles.noticeBody}>
         <p className={styles.noticeText}>
           <strong>Atenção:</strong> sempre verifique as informações dos locais antes de se
@@ -14,7 +15,7 @@ export default function NoticeCard() {
           atual do ponto de coleta. <strong>Todos os pontos inseridos foram validados pela nossa equipe.</strong>
         </p>
         <a className={styles.reportBtn} href={GMAIL_URL} target="_blank" rel="noopener noreferrer">
-           Reportar informação incorreta
+          Reportar informação incorreta
         </a>
       </div>
     </div>
