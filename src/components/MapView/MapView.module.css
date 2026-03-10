@@ -153,54 +153,54 @@
 }
 
 .popupHouseIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: #3498db;
 }
 
 .popupPackageIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+    height: 1rem;
   color: #e67e22;
 }
 
 .popupMapPinIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: #c0392b;
 }
 
 .popupClockIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: gray;
 }
 
 .popupPhoneIcon {
-  width: 14px;
-  height: 14px;
+  width: 0.845rem;
+  height: 0.845rem;
 }
 
 .popupCopyIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .popupCopyCheckIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: #27ae60;
 }
 
 .popupAlertIcon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: #c0392b;
 }
 
 .mapIcon {
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   color: #3498db;
 }
 
