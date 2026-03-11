@@ -55,6 +55,13 @@
   color: #fff;
 }
 
+.alertIcon{
+  height: 2.5rem;
+  width: 2.5rem;
+  stroke-width: 1.5px;
+  color: #e67e22;
+}
+
 @media (max-width: 600px) {
   .notice {
     padding: 0.75rem 0.9rem;
