@@ -19,7 +19,7 @@ export default function PointsFilter({ active, onChange, totalAll, totalColeta, 
         onClick={() => onChange('todos')}
       >
         Todos
-        <span className={styles.count}>{totalAll}</span>
+       
       </button>
       <button
         className={`${styles.btn} ${styles.btnColeta} ${active === 'coleta' ? styles.activeColeta : ''}`}
@@ -27,7 +27,7 @@ export default function PointsFilter({ active, onChange, totalAll, totalColeta, 
       >
         <Package className={styles.packageIcon} />
         Pontos de Coleta
-        <span className={styles.count}>{totalColeta}</span>
+        
       </button>
       <button
         className={`${styles.btn} ${styles.btnAbrigo} ${active === 'abrigo' ? styles.activeAbrigo : ''}`}
@@ -35,7 +35,7 @@ export default function PointsFilter({ active, onChange, totalAll, totalColeta, 
       >
         <House className={styles.houseIcon} />
         Abrigos
-        <span className={styles.count}>{totalAbrigo}</span>
+       
       </button>
     </div>
   )
