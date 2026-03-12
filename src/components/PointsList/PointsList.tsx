@@ -3,6 +3,7 @@ import type { CollectionPoint } from '../../types/CollectionPoint'
 import CollectionPointCard from '../CollectionPointCard/CollectionPointCard'
 import NoticeCard from '../NoticeCard/NoticeCard'
 import PointsFilter, { type FilterType } from '../PointsFilter/PointsFilter'
+import Pagination from '../Pagination/Pagination'
 import styles from './PointsList.module.css'
 
 const PAGE_SIZE = 6
@@ -38,18 +39,9 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
     setCurrentPage(1)
   }, [filter, search])
 
-  function goToPage(page: number) {
+  function handlePageChange(page: number) {
     setCurrentPage(page)
     document.getElementById('pontos')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-
-  function getPageNumbers(): (number | '...')[] {
-    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1)
-
-    if (currentPage <= 3) return [1, 2, 3, '...', totalPages]
-    if (currentPage >= totalPages - 2)
-      return [1, '...', totalPages - 2, totalPages - 1, totalPages]
-    return [1, '...', currentPage, '...', totalPages]
   }
 
   return (
@@ -130,47 +122,13 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
           </div>
         )}
 
-        {totalPages > 1 && (
-          <div className={styles.pagination}>
-            <button
-              className={styles.pageBtn}
-              onClick={() => goToPage(currentPage - 1)}
-              disabled={currentPage === 1}
-              aria-label="Página anterior"
-            >
-              ‹
-            </button>
-
-            {getPageNumbers().map((page, i) =>
-              page === '...' ? (
-                <span key={`ellipsis-${i}`} className={styles.ellipsis}>…</span>
-              ) : (
-                <button
-                  key={page}
-                  className={`${styles.pageBtn} ${page === currentPage ? styles.pageBtnActive : ''}`}
-                  onClick={() => goToPage(page)}
-                  aria-label={`Página ${page}`}
-                  aria-current={page === currentPage ? 'page' : undefined}
-                >
-                  {page}
-                </button>
-              )
-            )}
-
-            <button
-              className={styles.pageBtn}
-              onClick={() => goToPage(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              aria-label="Próxima página"
-            >
-              ›
-            </button>
-
-            <span className={styles.pageInfo}>
-              {start + 1}–{Math.min(start + PAGE_SIZE, filteredPoints.length)} de {filteredPoints.length} pontos
-            </span>
-          </div>
-        )}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={filteredPoints.length}
+          pageSize={PAGE_SIZE}
+          onPageChange={handlePageChange}
+        />
       </div>
     </section>
   )
