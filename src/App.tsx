@@ -45,10 +45,11 @@ export default function App() {
 
   return (
     <>
-      <Header />
-      <AlertBanner
+      <Header
         totalPoints={collectionPoints.filter((p) => p.type === 'coleta').length}
         totalShelters={collectionPoints.filter((p) => p.type === 'abrigo').length}
+      />
+      <AlertBanner
       />
       <main>
         <section id="mapa">

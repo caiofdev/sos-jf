@@ -1,6 +1,11 @@
 import styles from './Header.module.css'
 
-export default function Header() {
+interface Props {
+  totalPoints: number
+  totalShelters: number
+}
+
+export default function Header({ totalPoints, totalShelters }: Props) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
@@ -13,6 +18,17 @@ export default function Header() {
           <p className={styles.subtitle}>
             Encontre os pontos de coleta de doações e ajude quem mais precisa
           </p>
+        </div>
+                <div className={styles.stats}>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>{totalPoints}</span>
+            <span className={styles.statLabel}>Pontos de coleta</span>
+          </div>
+          <div className={styles.statDivider} />
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>{totalShelters}</span>
+            <span className={styles.statLabel}>Abrigos</span>
+          </div>
         </div>
       </div>
 
