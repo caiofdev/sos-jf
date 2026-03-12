@@ -6,12 +6,9 @@ export type FilterType = 'todos' | 'coleta' | 'abrigo'
 interface Props {
   active: FilterType
   onChange: (filter: FilterType) => void
-  totalAll: number
-  totalColeta: number
-  totalAbrigo: number
 }
 
-export default function PointsFilter({ active, onChange, totalAll, totalColeta, totalAbrigo }: Props) {
+export default function PointsFilter({ active, onChange }: Props) {
   return (
     <div className={styles.wrapper}>
       <button
