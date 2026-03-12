@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, useMapEvents } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import type { RouteResult } from '../../types/Route'
@@ -75,6 +75,34 @@ interface Props {
 
 const JF_CENTER: [number, number] = [-21.7642, -43.3503]
 
+function ScrollWheelController() {
+  const map = useMap()
+
+  useEffect(() => {
+    map.scrollWheelZoom.disable()
+
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node | null
+      const clickedInsideMap = target ? map.getContainer().contains(target) : false
+
+      if (!clickedInsideMap) {
+        map.scrollWheelZoom.disable()
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [map]);
+
+  useMapEvents({
+    click() {
+      map.scrollWheelZoom.enable()
+    },
+  });
+
+  return null
+}
+
 function MapFlyController({ selectedId, points }: { selectedId: string | null; points: CollectionPoint[] }) {
   const map = useMap()
 
@@ -112,12 +140,13 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
         center={JF_CENTER}
         zoom={13}
         className={styles.map}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ScrollWheelController />
         <MapFlyController selectedId={selectedId} points={points} />
 
         {routeCoords && (
