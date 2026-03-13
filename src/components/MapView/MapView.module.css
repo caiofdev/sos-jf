@@ -181,6 +181,8 @@
 .closeHintBtn {
   display: flex;
   align-items: center;
+  border: none;
+  background-color: transparent;
   color: var(--color-text);
   cursor: pointer;
   border-radius: 20px;
@@ -202,7 +204,7 @@
   color: var(--color-text);
   padding: 0.5rem;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: help;
   display: flex;
   align-items: center;
   gap: 0.3rem;

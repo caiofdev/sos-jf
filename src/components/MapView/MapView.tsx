@@ -8,6 +8,7 @@ import { isNearRoute } from '../../utils/routeGeometry'
 import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map, X, LocateFixed, Lightbulb} from 'lucide-react';
 import RoutePanel from '../RoutePanel/RoutePanel'
 import styles from './MapView.module.css'
+import { useIsMobile } from '../../hooks/useIsMobile'
 
 const GMAIL_BASE =
   'https://mail.google.com/mail/?view=cm&to=caiofreis2005@gmail.com&su=Informa%C3%A7%C3%B5es+incorretas+%E2%80%94+SOS+JF&body=Ol%C3%A1%2C%0A%0AIdentifiquei+uma+informa%C3%A7%C3%A3o+incorreta+no+site+SOS+JF%3A%0A%0ALocal%3A+'
@@ -82,7 +83,7 @@ function ScrollWheelController() {
 
   const [showHint, setShowHint] = useState(true);
 
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (isMobile) return;
@@ -127,12 +128,12 @@ function ScrollWheelController() {
 
     mapContainer.addEventListener('mouseenter', handleMouseEnter);
     mapContainer.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+    mapContainer.addEventListener('wheel', handleWheel, { passive: false, capture: true });
 
     return () => {
       mapContainer.removeEventListener('mouseenter', handleMouseEnter);
       mapContainer.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('wheel', handleWheel, { capture: true });
+      mapContainer.removeEventListener('wheel', handleWheel, { capture: true });
       map.off('popupopen');
       map.off('popupclose');
     }
@@ -148,13 +149,13 @@ function ScrollWheelController() {
   return showHint && !popupOpenRef.current ? (
     <div className={styles.scrollHint}>
       Segure Ctrl e role para ampliar
-      <span
+      <button
         className={styles.closeHintBtn}
         onClick={closeHint}
         title="Fechar dica"
       >
         <X size={16}/>
-      </span>
+      </button>
     </div>
   ) : (
     <div className={styles.lampWrapper}>
@@ -175,9 +176,11 @@ function CentralizeMap() {
 
   return (
     <button
+      type='button'
       onClick={handleCentralize}
       className={styles.centralizeBtn}
       title="Centralizar mapa"
+      aria-label="Centralizar mapa"
     >
       <LocateFixed  size={16} />
     </button>
