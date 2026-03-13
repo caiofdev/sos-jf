@@ -77,6 +77,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  pointer-events: auto;
 }
 
 .popup strong {
@@ -119,6 +120,7 @@
   cursor: pointer;
   line-height: 1.4;
   transition: color 0.15s ease;
+  pointer-events: auto;
 }
 
 .popupCopyBtn:hover {
@@ -145,11 +147,108 @@
   width: fit-content;
   padding: 0.1rem 0.4rem;
   border-radius: 3rem;
+  pointer-events: auto;
 }
 
 .popupReportBtn:hover {
   background-color: #c03a2b34;
   border: 1px solid #c03a2b57;
+}
+
+.scrollHint {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 17, 23, 0.80);
+  border: 1px solid rgba(59, 130, 246, 0.7);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  border-radius: 24px;
+  z-index: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  animation: fadeInHint 0.3s ease-out;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+.closeHintBtn {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0.2rem;
+  transition: color 0.15s ease;
+}
+
+.closeHintBtn:hover {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+.lampWrapper {
+  position: absolute;
+  top: 7.5rem;
+  left: 0.7rem;
+  z-index: 501;
+  background: rgba(15, 17, 23, 0.90);
+  border: 1px solid rgba(59, 130, 246, 0.7);
+  color: var(--color-text);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: fit-content;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.lampWrapper:hover {
+  background: rgba(15, 17, 23, 0.95);
+  padding: 0.5rem 1rem;
+}
+
+.lampHint {
+  color: var(--color-text);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  display: none;
+  margin-left: 0.3rem;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.lampWrapper:hover .lampHint{
+  display: inline;
+}
+
+.centralizeBtn {
+  position: absolute;
+  top: 5rem;
+  left: 0.7rem;
+  z-index: 501;
+  background: rgba(15, 17, 23, 0.90);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background 0.15s ease;
+}
+
+.centralizeBtn:hover {
+  background: rgba(15, 17, 23, 0.98);
 }
 
 .popupHouseIcon {
@@ -202,6 +301,19 @@
   width: 1.125rem;
   height: 1.125rem;
   color: #3498db;
+}
+
+
+@keyframes fadeInHint {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 @media (max-width: 600px) {
