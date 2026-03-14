@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { CollectionPoint } from '../../types/CollectionPoint'
 import type { RouteResult } from '../../types/Route'
 import { redIcon, blueIcon, greenIcon } from '../../utils/mapIcons'
 import { isNearRoute } from '../../utils/routeGeometry'
-import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map} from 'lucide-react';
+import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map, X, LocateFixed, Lightbulb} from 'lucide-react';
 import RoutePanel from '../RoutePanel/RoutePanel'
 import styles from './MapView.module.css'
+import { useIsMobile } from '../../hooks/useIsMobile'
 
 const GMAIL_BASE =
   'https://mail.google.com/mail/?view=cm&to=caiofreis2005@gmail.com&su=Informa%C3%A7%C3%B5es+incorretas+%E2%80%94+SOS+JF&body=Ol%C3%A1%2C%0A%0AIdentifiquei+uma+informa%C3%A7%C3%A3o+incorreta+no+site+SOS+JF%3A%0A%0ALocal%3A+'
@@ -75,6 +76,117 @@ interface Props {
 
 const JF_CENTER: [number, number] = [-21.7642, -43.3503]
 
+function ScrollWheelController() {
+  const map = useMap();
+  const mapRef = useRef(false);
+  const popupOpenRef = useRef(false);
+
+  const [showHint, setShowHint] = useState(true);
+
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (isMobile) return;
+
+    map.scrollWheelZoom.disable();
+    const mapContainer = map.getContainer();
+
+    function handleWheel(event: WheelEvent) {
+      if (!event.ctrlKey) return;
+
+      if (popupOpenRef.current) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+
+      if (mapRef.current) {
+        event.preventDefault();
+        map.scrollWheelZoom.enable();
+
+        setTimeout(() => {
+          map.scrollWheelZoom.disable();
+        }, 100);
+      }
+    }
+
+    function handleMouseEnter() {
+      mapRef.current = true;
+    }
+
+    function handleMouseLeave() {
+      mapRef.current = false;
+    }
+
+    map.on('popupopen', () => {
+      popupOpenRef.current = true;
+    })
+
+    map.on('popupclose', () => {
+      popupOpenRef.current = false;
+    })
+
+    mapContainer.addEventListener('mouseenter', handleMouseEnter);
+    mapContainer.addEventListener('mouseleave', handleMouseLeave);
+    mapContainer.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+
+    return () => {
+      mapContainer.removeEventListener('mouseenter', handleMouseEnter);
+      mapContainer.removeEventListener('mouseleave', handleMouseLeave);
+      mapContainer.removeEventListener('wheel', handleWheel, { capture: true });
+      map.off('popupopen');
+      map.off('popupclose');
+    }
+  }, [map, isMobile]);
+
+  function closeHint(e: React.MouseEvent) {
+    e.stopPropagation();
+    setShowHint(false);
+  }
+
+  if (isMobile) return null;
+
+  return showHint && !popupOpenRef.current ? (
+    <div className={styles.scrollHint}>
+      Segure Ctrl e role para ampliar
+      <button
+        className={styles.closeHintBtn}
+        onClick={closeHint}
+        title="Fechar dica"
+      >
+        <X size={16}/>
+      </button>
+    </div>
+  ) : (
+    <div className={styles.lampWrapper}>
+      <Lightbulb size={18}/>
+      <div className={styles.lampHint}>
+        Segure Ctrl + scroll para ampliar
+      </div>
+    </div>
+  );
+}
+
+function CentralizeMap() {
+  const map = useMap();
+
+  const handleCentralize = () => {
+    map.flyTo(JF_CENTER, 13, { duration: 1.2 });
+  }
+
+  return (
+    <button
+      type='button'
+      onClick={handleCentralize}
+      className={styles.centralizeBtn}
+      title="Centralizar mapa"
+      aria-label="Centralizar mapa"
+    >
+      <LocateFixed  size={16} />
+    </button>
+  );
+}
+
 function MapFlyController({ selectedId, points }: { selectedId: string | null; points: CollectionPoint[] }) {
   const map = useMap()
 
@@ -112,12 +224,14 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
         center={JF_CENTER}
         zoom={13}
         className={styles.map}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ScrollWheelController />
+        <CentralizeMap />
         <MapFlyController selectedId={selectedId} points={points} />
 
         {routeCoords && (
