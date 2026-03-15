@@ -1,4 +1,17 @@
 import styles from './Header.module.css'
+import EmergencyNumber from '../EmergencyNumber/EmergencyNumber'
+import { Siren } from "lucide-react"
+import { FireExtinguisher } from "lucide-react"
+import { Ambulance } from "lucide-react"
+import { Shield } from "lucide-react"
+
+
+const emergencyNumbers = [
+  { icon: <Siren />, label: 'Defesa Civil -', phone: '199' },
+  { icon: <FireExtinguisher />, label: 'Bombeiros -', phone: '193' },
+  { icon: <Ambulance />, label: 'SAMU -', phone: '192' },
+  { icon: <Shield />, label: 'Polícia Militar -', phone: '190' },
+];
 
 export default function Header() {
   return (
@@ -15,15 +28,18 @@ export default function Header() {
           </p>
         </div>
         <div className={styles.numbers}>
-          <span className={styles.service}><span>🚨 Defesa Civil:</span><a href="tel:199">199</a></span>
-          <span className={styles.divider}>|</span>
-          <span className={styles.service}><span>🚒 Bombeiros:</span><a href="tel:193">193</a></span>
-          <span className={styles.divider}>|</span>
-          <span className={styles.service}><span>🚑 SAMU:</span><a href="tel:192">192</a></span>
-          <span className={styles.divider}>|</span>
-          <span className={styles.service}><span>🚓 Polícia Militar:</span><a href="tel:190">190</a></span>
+          {emergencyNumbers.map((number) => (
+            <EmergencyNumber
+              key={number.phone}
+              icon={number.icon}
+              label={number.label}
+              phone={number.phone}
+            />
+          ))}
         </div>
       </div>
     </header>
   )
 }
+
+

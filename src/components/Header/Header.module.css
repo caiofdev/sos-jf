@@ -63,10 +63,6 @@
   white-space: nowrap;
 }
 
-.divider {
-  color: var(--color-border);
-}
-
 .numbers {
   display: flex;
   align-items: center;
