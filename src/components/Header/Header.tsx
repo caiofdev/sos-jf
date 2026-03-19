@@ -1,16 +1,12 @@
 import styles from './Header.module.css'
 import EmergencyNumber from '../EmergencyNumber/EmergencyNumber'
-import { Siren } from "lucide-react"
-import { FireExtinguisher } from "lucide-react"
-import { Ambulance } from "lucide-react"
-import { Shield } from "lucide-react"
-
+import { Siren, FireExtinguisher, Ambulance, Shield  } from "lucide-react"
 
 const emergencyNumbers = [
-  { icon: <Siren />, label: 'Defesa Civil -', phone: '199' },
-  { icon: <FireExtinguisher />, label: 'Bombeiros -', phone: '193' },
-  { icon: <Ambulance />, label: 'SAMU -', phone: '192' },
-  { icon: <Shield />, label: 'Polícia Militar -', phone: '190' },
+  { icon: Siren, label: "Defesa Civil -", phone: "199" },
+  { icon: FireExtinguisher, label: "Bombeiros -", phone: "193" },
+  { icon: Ambulance, label: "SAMU -", phone: "192" },
+  { icon: Shield, label: "Polícia Militar -", phone: "190" },
 ];
 
 export default function Header() {
