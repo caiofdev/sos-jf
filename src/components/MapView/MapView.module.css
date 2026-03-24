@@ -354,7 +354,7 @@
     position: absolute;
     top: 8rem;
     left: 1.8rem;
-    background: rgba(15, 17, 23, 0.92);
+    background: rgba(15, 17, 23, 0.90);
     border: 1px solid var(--color-border);
     color: var(--color-text);
     font-size: 0.75rem;
@@ -403,7 +403,7 @@
   .popup {
     gap: 0.1rem;
   }
-  
+
   .popup strong {
     font-size: 0.9rem;
   }
