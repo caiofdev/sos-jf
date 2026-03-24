@@ -2,7 +2,8 @@ import { useState } from 'react'
 import type { RouteResult } from '../../types/Route'
 import { geocode, getGPSCoords, calculateRoute } from '../../services/routeService'
 import styles from './RoutePanel.module.css'
-import { Map } from 'lucide-react';
+import { ChevronDown, ChevronUp, Map } from 'lucide-react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 interface Props {
   onResult: (result: RouteResult | null) => void
@@ -15,6 +16,7 @@ export default function RoutePanel({ onResult }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [active, setActive] = useState(false)
+  const isMobile = useIsMobile();
 
   async function handleCalculate() {
     if (!destination.trim()) return
@@ -27,6 +29,7 @@ export default function RoutePanel({ onResult }: Props) {
       const result = await calculateRoute(originCoords, destCoords)
       onResult(result)
       setActive(true)
+      setOpen(false)
     } catch (e) {
       const isGeoError = e instanceof GeolocationPositionError
       setError(
@@ -48,11 +51,26 @@ export default function RoutePanel({ onResult }: Props) {
     setError(null)
   }
 
-  if (!open) {
+  if (isMobile){
+    if(!open) {
+      return (
+        <div>
+          <div>
+            <button className={styles.toggleBtn} onClick={() => setOpen(true)}>
+              <ChevronUp />
+              <span>Traçar rota</span>
+            </button>
+          </div>
+        </div>
+      );
+    }
+  }
+
+  if (!open && !isMobile) {
     return (
       <button className={styles.toggleBtn} onClick={() => setOpen(true)}>
-        <Map className={styles.panelMapIcon} />
-        Traçar rota
+        <div className={styles.panelIconContainer}><Map className={styles.panelIconDesktop} /></div>
+        <span className={styles.toggleBtnTitle}>Traçar rota</span>
       </button>
     )
   }
@@ -60,10 +78,11 @@ export default function RoutePanel({ onResult }: Props) {
   return (
     <div className={styles.panel}>
       <div className={styles.panelHeader}>
-        <span className={styles.panelTitle}>
-          <Map className={styles.panelMapIcon} />
+        <div className={styles.panelTitle} onClick={isMobile ? () => { setOpen(false) } : undefined}>
+          <Map className={styles.panelIconDesktop} />
+          <ChevronDown className={styles.panelIconMobile}/>
           Traçar rota
-        </span>
+        </div>
         <button className={styles.closeBtn} onClick={() => { setOpen(false); handleClear() }}>✕</button>
       </div>
 
