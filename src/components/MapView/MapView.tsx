@@ -5,7 +5,7 @@ import type { CollectionPoint } from '../../types/CollectionPoint'
 import type { RouteResult } from '../../types/Route'
 import { redIcon, blueIcon, greenIcon } from '../../utils/mapIcons'
 import { isNearRoute } from '../../utils/routeGeometry'
-import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map, X, LocateFixed, Lightbulb} from 'lucide-react';
+import { AlertTriangle, Clock, Copy, CopyCheck, House, MapPin, Package, Phone, Map, X, LocateFixed, Lightbulb, Info} from 'lucide-react';
 import RoutePanel from '../RoutePanel/RoutePanel'
 import styles from './MapView.module.css'
 import { useIsMobile } from '../../hooks/useIsMobile'
@@ -205,6 +205,8 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
   const [routeCoords, setRouteCoords] = useState<[number, number][] | null>(null)
   const [routeInfo, setRouteInfo] = useState<{ distanceKm: number; durationMin: number } | null>(null)
   const [nearbyIds, setNearbyIds] = useState<Set<string>>(new Set())
+  const isMobile = useIsMobile();
+  const [legendOpen, setLegendOpen] = useState(false);
 
   function handleRouteResult(result: RouteResult | null) {
     if (!result) {
@@ -273,7 +275,14 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
         </div>
       )}
 
-      <div className={styles.legend}>
+      {isMobile && (
+        <div className={styles.legendToggle} onClick={() => setLegendOpen(!legendOpen)}>
+          <Info className={styles.legendInfoIcon}/>
+          <span> {!legendOpen ? '' : 'Ocultar'} Legenda</span>
+        </div>
+      )}
+
+      <div className={`${styles.legend} ${legendOpen ? styles.legendOpen : ''}`}>
         <div className={styles.legendItem}>
           <span className={styles.legendDot} style={{ background: '#e74c3c' }} />
           Ponto de Coleta
