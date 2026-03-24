@@ -58,9 +58,6 @@ export default function PointsList({ points, selectedId, onSelect }: Props) {
           <PointsFilter
             active={filter}
             onChange={setFilter}
-            totalAll={points.length}
-            totalColeta={points.filter((p) => p.type === 'coleta').length}
-            totalAbrigo={points.filter((p) => p.type === 'abrigo').length}
           />
 
           <div className={styles.controlsRight}>
