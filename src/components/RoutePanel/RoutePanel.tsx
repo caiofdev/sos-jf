@@ -51,8 +51,8 @@ export default function RoutePanel({ onResult }: Props) {
     setError(null)
   }
 
-  if (isMobile){
-    if(!open) {
+  if(!open) {
+    if(isMobile) {
       return (
         <div>
           <div>
@@ -64,15 +64,14 @@ export default function RoutePanel({ onResult }: Props) {
         </div>
       );
     }
-  }
-
-  if (!open && !isMobile) {
-    return (
-      <button className={styles.toggleBtn} onClick={() => setOpen(true)}>
-        <div className={styles.panelIconContainer}><Map className={styles.panelIconDesktop} /></div>
-        <span className={styles.toggleBtnTitle}>Traçar rota</span>
-      </button>
-    )
+    else {
+      return (
+        <button className={styles.toggleBtn} onClick={() => setOpen(true)}>
+          <div className={styles.panelIconContainer}><Map className={styles.panelIconDesktop} /></div>
+          <span className={styles.toggleBtnTitle}>Traçar rota</span>
+        </button>
+      );
+    }
   }
 
   return (

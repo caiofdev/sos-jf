@@ -272,6 +272,13 @@ export default function MapView({ points, selectedId, onMarkerClick }: Props) {
               • {nearbyIds.size} ponto{nearbyIds.size > 1 ? 's' : ''} na rota
             </span>
           )}
+          <button
+            className={styles.clearRouteBtn}
+            onClick={() => handleRouteResult(null)}
+            title="Limpar rota"
+          >
+            <X size={16} />
+          </button>
         </div>
       )}
 
