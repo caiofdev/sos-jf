@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
-import AlertBanner from './components/AlertBanner/AlertBanner'
 import MapView from './components/MapView/MapView'
 import PointsList from './components/PointsList/PointsList'
 import UsefulLinks from './components/UsefulLinks/UsefulLinks'
@@ -46,10 +45,6 @@ export default function App() {
   return (
     <>
       <Header />
-      <AlertBanner
-        totalPoints={collectionPoints.filter((p) => p.type === 'coleta').length}
-        totalShelters={collectionPoints.filter((p) => p.type === 'abrigo').length}
-      />
       <main>
         <section id="mapa">
           <MapView
